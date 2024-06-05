@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+   
+    "target": "es2015",                                  
+    "lib": ["dom","es6"],                                
+    "module": "es2020",                                
+    "esModuleInterop": true,                            
+    "forceConsistentCasingInFileNames": true,           
+    "strict": true,                                      
+    "skipLibCheck": true,                                 
+    "exactOptionalPropertyTypes" : false,
+    "strictNullChecks": false,
+    "importHelpers": true,
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["../node_modules/@types"],
+    "types": ["cypress", "node", "cypress-fill-command", "cypress-real-events"],
+  },
+  "include": ["**/*.ts"]
+}

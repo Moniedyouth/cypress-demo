@@ -1,0 +1,20 @@
+{
+  "name": "cypressapitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open --e2e -b chrome"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
+    "@typescript-eslint/parser": "5.50.0",
+    "ajv": "^8.16.0",
+    "cypress": "13.11.0",
+    "typescript": "4.7.4"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1"
+  }
+}
