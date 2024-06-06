@@ -69,8 +69,12 @@ export class Helpers {
     cy.get(selector).trigger("mouseenter", { force: true }).invoke("show");
   }
 
-  public hoverElementBySelectorRightclick(selector: string) {
+  public hoverElementBySelectorRightClick(selector: string) {
     cy.get(selector).rightclick();
+  }
+
+  public hoverElementBySelectorAndIndexRightClick(selector: string, index: number) {
+    cy.get(selector).eq(index).rightclick();
   }
 
   public hoverElementBySelectorActive(selector: string) {

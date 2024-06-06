@@ -8,5 +8,8 @@ Cypress.Commands.add('validateSchema', (schema, data) => {
   const valid = validate(data);
   if (!valid) {
     throw new Error('Schema validation error: ' + JSON.stringify(validate.errors));
+  } else {
+    cy.log(`Schema validated successfully!`);
   }
 });
+

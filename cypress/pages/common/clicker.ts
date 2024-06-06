@@ -54,16 +54,17 @@ export class Clicker {
     cy.get(selector).eq(index).click({ force: isForce });
   }
 
-  public choosePresentNthElement(elements: string, index: number) {
-    cy.get(`${elements}:not(.cs-grid-layout__brick.product__out-of-stock)`).eq(index).click();
+  public clickOnVisibleElementBySelector(selector: string, isForce?: boolean,) {
+    cy.get(selector).filter(':visible').click({ force: isForce });
   }
 
   public chooseLinkPresentNthElement(elements: string, index: number) {
     cy.get(elements).eq(index).click();
   }
-
-  public clickOnElementBySelectorByIndex(elements: string, elemNumber: number, isScroll?: boolean | any) {
-    cy.get(elements).eq(elemNumber).click({scrollBehavior:isScroll});
+  public clickOnAllElementsBySelector(selector: string): void {
+    cy.get(selector).each((element) => {
+      cy.wrap(element).click({timeout:500});
+    });
   }
 
   public selectOptionByIndex(
